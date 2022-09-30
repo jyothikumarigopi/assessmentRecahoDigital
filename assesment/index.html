@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <style>
+        p {
+            color: green;
+        }
+
+        /* CSS link color */
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+            </svg>
+            <a href="">contact@tmbill.com</a>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+            <a href="">9912929055</a>
+        </div>
+        <div class="d-flex flex-row justify-content-space-center p-2 ">
+            <a href="https://www.facebook.com/login/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg></a>
+            <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg></a>
+            <a href="https://www.youtube.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                </svg></a>
+            <a href="https://www.linkedin.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg></a>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="download" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Download
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Download Software</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input class="mb-2" type="text" placeholder="Enter Name" />
+                            <br />
+                            <input class="mb-2" type="text" placeholder="Enter Email" />
+                            <br />
+                            <input class="mb-2" type="text" placeholder="Enter phonenumber" />
+                            <br />
+
+
+
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="download">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </nav>
+
+
+    <strong>Preview:</strong><br>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand" href="#">
+            <img src="https://tmbill.com/img/tmbill-logo.svg" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link " href="#">Home <span class="sr-only ">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        OutLet Type
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">QSR</a>
+                        <a class="dropdown-item" href="#">Dine In</a>
+                        <a class="dropdown-item" href="#">Cafes</a>
+                        <a class="dropdown-item" href="#">Colud Kitchens</a>
+                        <a class="dropdown-item" href="#">Food Trcaks</a>
+                        <a class="dropdown-item" href="#">Bakery</a>
+                        <a class="dropdown-item" href="#">Ice Cream</a>
+                        <a class="dropdown-item" href="#">Pund & Bars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        WhyTMBill
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">For Multiple Outlets/FRANCHISEE</a>
+                        <a class="dropdown-item" href="#">For Owner</a>
+                        <a class="dropdown-item" href="#">For Staff</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our Presence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Become A Partner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class=" pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5">
+
+
+                    <h1 class="head">Reopen Restaurents With <span class="span">Technology!</span></h1>
+                    <p class="para">Unlock Your Restaurant With Digital Ordering!</p>
+
+                    <div>
+                        <button class="btn">TakeFreeDemo</button>
+                        <button class="btn1 btn-success">Read Our Story</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-7">
+                    <div class="text-center">
+
+                        <img src="https://tmbill.com/img/tmbill_all_in_one_restaurant_pos.png" class="image" />
+
+
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-6 text-center">
+                <div>
+                    <img src="https://tmbill.com/img/tmbill_restaurant_operating_system.png" class="image12" />
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 order-1 text-center">
+                <h1 class="head">Restaurant Operating System</h1>
+                <p class="para">
+                    TMBill is a leading cloud-based end-to-end technology solutions for the Restaurants, Bars, Cafés, QSRs, Ice-cream Shops, Bakeries, and Cake Shops.<br />
+
+                    TMBill helps all types of food businesses, from a standalone food outlets to a large food chain, manage functions like billing, QR Code Ordering Platform, CRM, Customer Loyalty, Aggregators integrations, Analytics, Inventory, Recipe, and Wastage Management, Centralized Menu Management, Vendor Management and more. We have successfully registered a global presence, with more than 5000+ customers in over 350+ cities and 21+ countries.<br />
+
+                    We are the first company to provide a complete online cloud POS solution for restaurants on Desktop and Mobile Devices.
+                </p>
+
+                <div class="col-12 col-md-6 order-2 d-flex flex-row">
+
+                    <div class="card shadow">
+                        <h1 class="cardHead pl-3 pb-3">Integration</h1>
+                        <div>
+                            <img src="https://tmbill.com/img/integration/tmbill_swiggy_integration.png" class="icon" />
+                            <img src="https://tmbill.com/img/integration/tmbill_zomato_integration.png" class="icon" />
+                            <img src="https://tmbill.com/img/integration/tmbill_dunzo_integration.png" class="icon" />
+                            <img src="https://tmbill.com/img/integration/tmbill_googlepay_integration.png" class="icon" />
+                            <img src="https://tmbill.com/img/integration/tmbill_paytm_integration.png" class="icon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card shadow">
+                        <h1 class="cardHead pl-3 pb-3">Works On</h1>
+                        <div>
+                            <img src="https://tmbill.com/img/integration/tmbill_works_on_android.png" class="icon pr-4" />
+                            <img src="https://tmbill.com/img/integration/tmbill_works_on_apple.png" class="icon pr-4" />
+                            <img src="https://tmbill.com/img/integration/tmbill_works_on_windows.png" class="icon" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 ">
+                <div class=" shadow">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/outlet/tmbill_admin_control.png" class="image" />
+                    </div>
+                    <p class="para p-2 ml-2 text-center">
+                        Paperless Menu with Ordering Platform
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 ">
+                <div class="shadow">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/outlet/tmbill_deskop_pos_auto_sync.png" class="image" />
+                    </div>
+                    <p class="para p-2 ml-2 text-center">
+                        Desktop and Mobile POS with Cloud Sync
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-3 ">
+                <div class="shadow">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/outlet/tmbill_Billing_and_Inventory.png" class="image" />
+                    </div>
+                    <p class="para p-2 ml-2 text-center">
+                        Inventory and Stock Management
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 ">
+                <div class="shadow">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/outlet/tmbill_support_24_by_7.png" class="image" />
+                    </div>
+                    <p class="para  p-2 ml-2 text-center">
+                        24 X 7 Support
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sec-heading">
+                        <h2>Our Clients</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme clients-carousel">
+
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_onebite.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_sagar_ratna.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_shree_rathnam.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_swagath.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_chanderlok.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_burgerlounge.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_pokketcafe.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_chanderlok.jpg"></div>
+
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_lazzetti.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_burgerlounge.jpg"></div>
+                        <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_chanderlok.jpg"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script>
+        $('.clients-carousel').owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin: 15,
+            dots: false,
+            slideTransition: 'linear',
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            autoplaySpeed: 4500,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                500: {
+                    items: 3
+                },
+                600: {
+                    items: 4
+                },
+                800: {
+                    items: 4
+                },
+                1200: {
+                    items: 4
+                }
+
+            }
+        });
+    </script>
+    <div class="greencard">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-2 ">
+                    <h1 class="white pt-5 mr-3 pr-3 text-center">Company highlights</h1>
+
+
+                    <p class="white pt-3 mr-3 pr-3 text-center"> Powering 5000+ Restaurants</p>
+                </div>
+                <div class="col-12 col-md-2 m-3">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/facts/tmbill-customer.png" class="icon1" />
+                    </div>
+                    <h1 class="white text-center">5000+</h1>
+                    <p class="white text-center">Happy Restaurants</p>
+                </div>
+                <div class="col-12 col-md-2 m-3 ">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/facts/tmbill-contry.png" class="icon1" />
+                    </div>
+                    <h1 class="white text-center">21+</h1>
+                    <p class="white text-center">Countries</p>
+                </div>
+                <div class="col-12 col-md-2 m-3">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/facts/tmbill-shopping.png" class="icon1" />
+                    </div>
+                    <h1 class="white text-center">4,50,000
+
+
+                    </h1>
+                    <p class="white text-center">Daily Orders World wide
+
+                        tmbill-brand</p>
+                </div>
+                <div class="col-12 col-md-2 m-3">
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://tmbill.com/img/facts/tmbill-brand.png" class="icon1" />
+                    </div>
+                    <h1 class="white text-center">32+</h1>
+                    <p class="white text-center">Brands</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="ourpartners">
+        <div class="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-heading">
+                            <h2>Our Partners</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="owl-carousel owl-theme clients-carousel">
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-radyes.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-upsale.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-instamojo.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-payu.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-razorpay.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-reelo.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-talabat.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-zomato.jpg"></div>
+
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-careem.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/Partners/tmbill-deliveroo.jpg"></div>
+                            <div class="item box"><img alt="client logo" class="client-img" src="https://tmbill.com/img/clients/tmbill_powered_by_chanderlok.jpg"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+        </script>
+        <script>
+            $('.clients-carousel').owlCarousel({
+                autoplay: true,
+                loop: true,
+                margin: 15,
+                dots: false,
+                slideTransition: 'linear',
+                autoplayTimeout: 4500,
+                autoplayHoverPause: true,
+                autoplaySpeed: 4500,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    500: {
+                        items: 3
+                    },
+                    600: {
+                        items: 4
+                    },
+                    800: {
+                        items: 4
+                    },
+                    1200: {
+                        items: 4
+                    }
+
+                }
+            });
+        </script>
+    </div>
+    <div class="outlet">
+        <div>
+            <h1 class="h1 text-center">Outlet Types</h1>
+            <p class="para1 pl-3">TMBill’s Restaurant Management POS is built for all types of restaurant sizes and formats from single outlets to 100+ outlet chains.</p>
+            <p class="para1 pl-5"> Select your format to see how TMBill can help you run better.</p>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3 ">
+                        <div class="shadow">
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_qsr.png" class="image text-center" />
+                                </p>
+                            </div>
+
+                            <p class="para  text-center p-2 ml-2">
+                                QSR
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <div class="shadow">
+
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_dine_in.png" class="image" />
+
+                                </p>
+                            </div>
+                            <p class="para text-center p-2 ml-2">
+                                Dine-in
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-3 ">
+
+                        <div class="shadow">
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_cafe.png" class="image" />
+                                </p>
+                            </div>
+                            <p class="para text-center p-2 ml-2">
+                                Cafes
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-3 ">
+                        <div class="shadow">
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_cloud_kitchen.png" class="image" />
+                                </p>
+                            </div>
+                            <p class="para text-center p-2 ml-2">
+                                Cloud Kitchens
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-3 ">
+                        <div class="shadow">
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_food_truck.png" class="image text-center" />
+                                </p>
+                            </div>
+                            <p class="para  text-center p-2 ml-2">
+                                Food Trucks
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <div class="shadow">
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_Bakeries.png" class="image text-center" />
+                                </p>
+                            </div>
+                            <p class="para  text-center p-2 ml-2">
+                                bakeries
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <div class="shadow">
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_ice_cream.png" class="image text-center" />
+                                </p>
+                            </div>
+                            <p class="para  text-center p-2 ml-2">
+                                Ice Cream
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <div class="shadow">
+                            <div class="d-flex flex-row justify-content-center">
+                                <p class="hover-underline-animation">
+                                    <img src="https://tmbill.com/img/outlet/tmbill_for_Pubs_bars.png" class="image text-center" />
+                                </p>
+                            </div>
+
+                            <p class="para  text-center p-2 ml-2">
+                                Pubs $ Bars
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="h1 pt-5 text-center">From The Press And Media</h1>
+    <div>
+
+    </div>
+
+    <div class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="sec-heading">
+                        <p class="hover-underline-animation">
+                            <img src="https://tmbill.com/img/media/1.png" class="image2" />
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="sec-heading">
+                        <p class="hover-underline-animation">
+                            <img src="https://tmbill.com/img/media/2.png" class="image2" />
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="sec-heading">
+                        <p class="hover-underline-animation">
+                            <img src="https://tmbill.com/img/media/3.jfif" class="image2" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="happiest">
+        <div class="carousel bg-success text-center">
+            <h3 class="text-center pt-5 text-white">Happy Clients</h3>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner bg-success">
+                    <div class="carousel-item active">
+
+                        <img src="https://tmbill.com/img/happy-client/tmbill_one_bite.jpg" alt="tmbill_one_bite" class="rounded-circle tmbill-happyclient-img icon3 pb-3" />
+                        <div class="author-text">
+                            <p>I would definitely recommend this software to all the store / outlets / restaurants as we are already using it in 100+ outlets. TMBill team is so co-operative & provides extremely satisfying services.</p>
+                        </div>
+                        <p class="author-spec"><strong>MR. Abhishek</strong></p>
+                        <p class="text-white">Co-Founder<br>OneBite</p>
+                    </div>
+                    <div class="carousel-item">
+
+                        <img src="https://tmbill.com/img/happy-client/tmbill_doha_qatar.jpg" alt="tmbill_doha_qatar" class="rounded-circle tmbill-happyclient-img icon3 pb-3" />
+                        <div class="author-text">
+                            <p>Different suites of apps which makes operation of every F&B outlets easy. Efficient support team making integrations possible. Economical and convenient solution found by our team after a good research among POS apps.</p>
+                        </div>
+                        <p class="author-spec"><strong>Ahamed Ihjas</strong></p>
+                        <p class="text-white">Founder of<br>Maraheb Mandi (Doha Qatar)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://tmbill.com/img/happy-client/tmbill_south_indian.jpg" alt="tmbill_south_indian" class="rounded-circle tmbill-happyclient-img icon3 pb-3 " />
+                        <div class="author-text">
+                            <p>We use TMBill as our POS partner, it's flexible to use. We are happy to work with TMBill because they work enormously and are available 24x7 whenever we need support even if we are in Europe and they are operating from India.</p>
+                        </div>
+                        <p class="author-spec"><strong>Kannathasan Pandian</strong></p>
+                        <p class="text-white">Director & Founder <br>South Indian (Denmark)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://tmbill.com/img/happy-client/tmbill_the_taste_of_india.jpg" alt="tmbill_south_indian" class="rounded-circle tmbill-happyclient-img icon3 pb-3" />
+                        <div class="author-text">
+                            <p>We use TMBill as our POS partner, it's flexible to use. We are happy to work with TMBill because they work enormously and are available 24x7 whenever we need support even if we are in Europe and they are operating from India.</p>
+                        </div>
+                        <p class="author-spec"><strong>Kannathasan Pandian</strong></p>
+                        <p class="text-white">Director & Founder <br>South Indian (Denmark)</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="https://tmbill.com/img/happy-client/tmbill_funky_buddha.jpg" alt="tmbill_funky_buddha" class="rounded-circle tmbill-happyclient-img icon3 pb-3" />
+                        <div class="author-text">
+                            <p>Best and easy software to work with and the support team are also very helpful and they give support everyone you can call them If it had option for 10 star I would give 10 stars for TMBill billing software.</p>
+                        </div>
+                        <p class="author-spec"><strong>Tushar Shrestha</strong></p>
+                        <p class="text-white">Funky Buddha (Founder),<br> Dimapur, Nagaland - 797112.</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="https://tmbill.com/img/happy-client/tmbill_the_taste_of_india.jpg" alt="tmbill_the_taste_of_india" class="rounded-circle tmbill-happyclient-img icon3 pb-3" />
+                        <div class="author-text">
+                            <p>Thank you Rahil and team. Your software is very useful to us moreover your 24 hours team support. I am really recommend this software to others to use and good price. Keep going on guys good luck.</p>
+                        </div>
+                        <p class="author-spec"><strong>Rejoice Thomas</strong></p>
+                        <p class="text-white">The Taste of India (M.D.),<br>Auckland, New Zealand - 1042.</p>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div>
+        <div class="h1 text-center">
+            <h1>Take a Free Demo</h1>
+        </div>
+        <div class="container mb-5">
+            <div class="row">
+
+
+                <div class="col-12 col-md-6">
+                    <div class=" shadow">
+                        <form action="?" method="POST">
+                            <input type="box" placeholder="Restaurent Name" class="boxorder  mb-3" /><br />
+                            <input type="box" placeholder="Owner Name" class="boxorder  mb-3" /><br />
+
+                            <input type="box" placeholder="Owner Email" class="boxorder  mb-3" /><br />
+                            <div class="d-flex flex-row">
+                                <select class="pl-3">
+                                    <option>
+                                        india(91)
+                                    </option>
+                                    <option>
+                                        sri lanka(+94)
+                                    </option>
+                                    <option>Austraila(51)</option>
+                                    <option>iceland(+354)</option>
+                                    <option>HUNGRY(+36)</option>
+                                    <option>INDONESIA(+62)</option>
+                                    <option>JAPAN(+81)</option>
+                                    <option>ITALY(+39)</option>
+                                    <option>Mali(+222)</option>
+                                    <option>SUDAN(291)</option>
+                                    <option>America(71)</option>
+                                </select>
+                                <input type="number" placeholder="Enter Address" class="boxorder  mb-3" />
+                                <br />
+                            </div>
+                            <input type="number" placeholder="Owner Mobile" class="boxorder  mb-3" /><br />
+
+                            <input type="tel" placeholder="Enter city" class="boxorder  mb-3" />
+
+
+
+                            <div class=>
+                                <input type="checkbox" name="gender" id="genderMale" />
+                                <label for="genderMale">i'm not a robot</label>
+
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LfNYD4iAAAAAIoLWpQZXCCTANbWbbithMO_qlI3"></div>
+                            <br />
+                            <input type="submit" value="Submit">
+                        </form>
+
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+
+                    <img src="https://tmbill.com/img/tmbill_request_for_demo.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="bg">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="https://tmbill.com/img/tmbill_request_for_call_back.png" />
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="white pt-5">Get On-TMBill - Request for call!</p>
+
+                <select>
+                    <option>
+                        india(91)
+                    </option>
+                    <option>
+                        sri lanka(+94)
+                    </option>
+                    <option>Austraila(51)</option>
+                    <option>iceland(+354)</option>
+                    <option>HUNGRY(+36)</option>
+                    <option>INDONESIA(+62)</option>
+                    <option>JAPAN(+81)</option>
+                    <option>ITALY(+39)</option>
+                    <option>Mali(+222)</option>
+                    <option>SUDAN(291)</option>
+                    <option>America(71)</option>
+                </select>
+                <input type="number" placeholder="Phone Number" class="boxorder  mb-3" />
+                <button class="btn btn-success">send</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="shadow">
+            <h1>Where We are Now</h1>
+            <div class="shadow">
+
+                <p>
+
+                    Abu Dhabi | Agartala | Agra | Ahmedabad | Ahmednagar | Anantnag | Aizawl | Ajman | Ajmer | Akola | Alibag | Alipurduar | Aligarh | Allahabad | Alwar | Alleppey | Al Khobar | Al Hofuf | Adliya | Al Masnaah | Al Suwayq | Amalfi Coast | Ambala | Amravati | Amritsar | Amsterdam | Andaman-Nicobar | Aurangabad | Asansol | Athens | Budaiya | Barka | Bandipore | Baramula | Budgam | Buraydah | Bhaktapur | Biratnagar | Barishal | Banswara | Bhilwara | Bangalore | Baramati | Barasat | Barcelona | Bareilly | Belgaum | Baga | Berlin | Bharatpur | Bhavnagar | Bhopal | Bhubaneswar | Bhilai | Bhiwandi | Bikaner | Bilaspur | Bisalpur | Budapest | Buldhana | Brussels | Cumilla | Chattogram | Chandigarh | Chennai | Chitwan | Chhindwara | Copenhagen | Coorg | Cuttack | Duqm | Darbhanga | Darjeeling | Daman | Doda | Dhaka | Dehradun | Dammam | Delhi | Deoria | Dharamsala | Dhanbad | Dibrugarh | Dimapur | Dispur | Dombivli | Dublin | Durgapur | Dubai | Dwarka | East-Godavari | Edinburgh | Falaj | Faridabad | Fazilka | Fujairah | Janakpur | Florence | Ganderbal | Gelephu | Gandhinagar | Gangtok | Ghaziabad | Gaya | Gorakhpur | Gulbarga | Guntur | Gwalior | Gurugram | Guwahati | Hamala | Hubli | Hunza | Howrah | Hyderabad | Hajipur | Hail | Isa Town | Ilam | Ibra | Ibri | Imphal | Indore | Istanbul | Itanagar | Islamabad | Jammu | Juffair | Jeddah | Jabalpur | Jaipur | Jalandhar | Jamnagar | Jaisalmer | Jalpaiguri | Jamshedpur | Jalgaon | Jhasi | Jodhpur | Khamis Mushait | Khulna | Kathmandu | Kalimpur | Kalimpong | Kanpur | Karachi | Kavaratti | Khammam | Kochi | Kohima | Kalyan | Kota | Kathua | Kishtwar | Kulgam | Kupwara | Kozhikode | Kolhapur | Kolkata | Kullu-Manali | Ladakh | Lahore | Lake Como | Lisbon | Lonavala | Loni | London | Lucknow | Lumbini | Ludhiana | Manama | Mymensingh | Muharraq | Muscat | Mecca | Medina | Madrid | Morbi | Muzaffarpur | Mahabaleshwar | Mangalore | Meerut | Mirzapur | Mohali | Mount Abu | Mumbai | Mysore | Madurai | Malegaon | Mathura | Mira-Bhayandar | Miraj | Moradabad | Multan | Narayanganj | Nizwa | Nagpur | Nuwakot | Nainital | Nanded | Nashik | NCR | Nepal | New Mumbai | Noida | Nellore | Nizamabad | Ooty | Patna Sharif | Pachmarhi | Pangani | Phuentsholing | Paro | Pokhara | Panauti | Patan | Panipat | Panjim | Pulwama | Punch | Panvel | Paris | Patna | Pondicherry | Port Blair | Prague | Pune | Puri | Pushkar | Patiala | Peshawar | Riffa | Riyadh | Raichur | Rangpur | Rajshahi | Raipur | Rajkot | Ranchi | Rawalpindi | Ras al Khaimah | Ratlam | Rewa | Rome | Rajouri | Ramban | Reasi | Rohtak | Roorkee | Saham | Sylhet | Salalah | Seeb | Sohar | Sur | Sagar | Santorini | Silchar | Salem | Sambalpur | Sangli | Satara | Samba | Shupiyan | Saharanpur | Sangamner | Secunderabad | Sharjah | Shillong | Shirdi | Srinagar | Shrirampur | Siliguri | Silvassa | Sitapur | Solapur | Sonipat | Surat | Stockholm | Swiss Alps | Tabuk | Taif | Thane | Tawang | The Azores | Tiruchirappalli | Tirunelveli | Thimphu | Tiruppur | Thiruvananthapuram | Udaipur | Ujjain | Udhampur | Ulhasnagar | Umm Al Quwain | Vadodara | Varanasi | Vellore | Venice | Vienna | Vijayawada | Visakhapatnam | Vasai-Virar | Wardha | Warangal | Yamuna Nagar | Zirakpur
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
